@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 
   <title>All Aboard!</title>
-  <link rel="stylesheet" type="text/css" href="theme.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="myscripts.js"></script>
+  <script src="js.js"></script>
 
 </head>
 
@@ -22,6 +22,28 @@
     <div class="jumbotron">
       <h1 class="text-center">Chugga Chugga Choo Choo</h1>
     </div>
+    <form role="form">
+      <div class="form-group row">
+        <label for="train-input">Train Name:</label>
+        <input class="form-control" id="train-input" type="text">
+      </div>
+      <div class="form-group row">
+        <label for="destination-input">Destination:</label>
+        <input class="form-control" id="destination-inout" type="text">
+      </div>
+      <div class="form-group row">
+        <label for="frequency-input">Frequency:</label>
+        <input class="form-control" id="frequency-input" type="number">
+      </div>
+      <div class="form-group row">
+        <label for="next-arrival input">Next Arrival:</label>
+        <input class="form-control" id="next-arrival input" type="text">
+      </div>
+      <div class="form-group row">
+        <label for="minutesAway">Minutes Away:</label>
+        <input class="form-control" id="minutesAway-input" type="hh:mm">
+      </div>
+    </form>
     <table>
       <thead>
         <div class="row">
@@ -71,16 +93,13 @@
     $("#add-user").on("click", function(event) {
       event.preventDefault();
 
-      // YOUR TASK!!!
-      // Code in the logic for storing and retrieving the most recent user.
-      // Don't forget to provide initial data to your Firebase database.
       trainName = $("#train-name-input").val().trim();
       destination = $("#destination-input").val().trim();
       frequency = $("#frequency-input").val().trim();
       nextArrival = $("#nextArrival-input").val().trim();
       minutesAway = $("#minutesAway-input").val().trim();
 
-      // Code for the push
+      
       dataRef.ref().push({
 
         trainName: Train-Name,
